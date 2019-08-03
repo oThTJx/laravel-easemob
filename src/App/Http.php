@@ -59,6 +59,7 @@ class Http
             Cache::pull(Easemob::CACHE_NAME);
         }
 
+        //由于影响判断,注释
 //        if($status !== 200){
 //            $return_array = json_decode($result,true);
 //            if($return_array){
