@@ -59,19 +59,19 @@ class Http
             Cache::pull(Easemob::CACHE_NAME);
         }
 
-        if($status !== 200){
-            $return_array = json_decode($result,true);
-            if($return_array){
-                $error_message = '请求错误:' ;
-                if(isset($return_array['error']))
-                    $error_message .= $return_array['error'];
-                if(isset($return_array['error_description']))
-                    $error_message .= ' '.$return_array['error_description'];
-            }else{
-                $error_message = '请求错误!' ;
-            }
-            throw new EasemobError($error_message,$status);
-        }
+//        if($status !== 200){
+//            $return_array = json_decode($result,true);
+//            if($return_array){
+//                $error_message = '请求错误:' ;
+//                if(isset($return_array['error']))
+//                    $error_message .= $return_array['error'];
+//                if(isset($return_array['error_description']))
+//                    $error_message .= ' '.$return_array['error_description'];
+//            }else{
+//                $error_message = '请求错误!' ;
+//            }
+//            throw new EasemobError($error_message,$status);
+//        }
 
         // 在下载文件的时候 不是json
         if($is_json){
